@@ -11,13 +11,13 @@ services:
     volumes:
       - ./backend:/app/
     environment:
-      MONGODB_URL: mongodb://mongo:27017/cockteland
+      MONGODB_URL: mongodb://mongo:27017/offers
 
   frontend:
     image: nginx
     working_dir: /usr/share/nginx/html
     ports:
-      - 4202:80
+      - 4200:80
     volumes:
       - ./frontend:/usr/share/nginx/html
 

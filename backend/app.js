@@ -5,11 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
+
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var drinksRouter = require('./routes/drinks');
-var authorsRouter = require('./routes/authors')
-var authorization=require('./middlewares/authorization');
+var userRouter = require('./routes/user');
+var offerRouter = require('./routes/offer');
+var achieveRouter = require('./routes/achieve');
+var corporateRouter = require('./routes/corporate');
+var experienceRouter = require('./routes/experience');
+var sectorRouter = require('./routes/sector');
+var titulationRouter = require('./routes/titulation');
 
 
 var app = express();
@@ -26,10 +30,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/authors', authorsRouter);
-app.use('/drinks',authorization, drinksRouter);
-// app.use('/authors', authorsRouter);
+app.use('/user', userRouter);
+app.use('/offer', offerRouter);
+app.use('/achieve', achieveRouter);
+app.use('/corporate', corporateRouter);
+app.use('/experience', experienceRouter);
+app.use('/sector', sectorRouter);
+app.use('/titulation', titulationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
