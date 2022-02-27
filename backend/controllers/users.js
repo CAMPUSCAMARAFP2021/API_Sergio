@@ -27,7 +27,8 @@ const createUser=async(user)=>{
     console.log(name, checkuser)
     if(checkuser == null){
         user.passwd = encryptarPass(user.passwd)
-        return await User.create(user)
+        const newUser = await User.create(user)
+        return buildJWT(newUser)
     }else{
         throw new Error("Usuario ya registrado")
     }

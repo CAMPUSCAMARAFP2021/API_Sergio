@@ -13,6 +13,12 @@ router.get('/:offerID', async(req, res) => {
     res.json(offer);
 })
 
+router.post('/:offerID', async(req, res) => {
+    const {offerID} = req.params;
+    const offer = await offersControllers.deleteOffer(offerID);
+    res.json(offer);
+})
+
 router.post('/addoffer',async(req,res)=>{
     const offer = req.body;
     console.log(req.user._id)
