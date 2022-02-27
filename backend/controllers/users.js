@@ -22,7 +22,7 @@ const login=async(name,passwd)=>{
 
 const createUser=async(user)=>{
     const {name} = user
-    const checkuser = User.find({name})
+    const checkuser = User.find(name)
     if(!checkuser){
     user.passwd=encryptarPass(user.passwd)
     console.log(user.passwd)

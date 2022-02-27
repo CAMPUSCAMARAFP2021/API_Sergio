@@ -15,8 +15,10 @@ router.get('/:offerID', async(req, res) => {
 
 router.post('/addoffer',async(req,res)=>{
     const offer = req.body;
+    console.log(req.user._id)
     offer.user = req.user._id;
     const offers=await offersControllers.createOffer(offer, req.offer);
+    
     res.redirect('/home.html?authorization='+ offers)
 })
 
