@@ -1,8 +1,10 @@
 const jwt = require('jsonwebtoken');
+const Offer = require('../models/Offer');
 
 module.exports = async(req, res, next) => {
     const {authorization} = req.query;
-    const {author} = jwt.verify(authorization, 'secreto');
-    req.author = author;
+    Offer.user = req.user._id;
+    const {user} = jwt.verify(authorization, 'secreto');
+    req.user = user;
     next();
 }

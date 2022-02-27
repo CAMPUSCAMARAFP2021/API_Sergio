@@ -1,4 +1,5 @@
 const Offer=require('../models/Offer');
+const offercontrollers = require('./offers')
 
 const createOffer=async(offer)=>{
     return await Offer.create(offer);

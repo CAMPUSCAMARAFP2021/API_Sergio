@@ -14,6 +14,7 @@ var corporateRouter = require('./routes/corporate');
 var experienceRouter = require('./routes/experience');
 var sectorRouter = require('./routes/sector');
 var titulationRouter = require('./routes/titulation');
+const authorization = require('./middlewares/authorization');
 
 
 var app = express();
@@ -31,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);
-app.use('/offer', offerRouter);
+app.use('/offer',authorization, offerRouter);
 app.use('/achieve', achieveRouter);
 app.use('/corporate', corporateRouter);
 app.use('/experience', experienceRouter);

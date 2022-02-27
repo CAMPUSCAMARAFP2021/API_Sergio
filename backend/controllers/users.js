@@ -1,5 +1,6 @@
 const User=require('../models/User');
 const jsw= require('jsonwebtoken');
+const Offer = require('../models/Offer');
 
 const encryptarPass=(pass)=>{
     return pass;
@@ -42,6 +43,12 @@ const getBtandById=async({userID})=>{
     return await User.findById(userID)
 }
 
+const addOfferToUser = async(user, offer) =>{
+    return await User.findByIdAndUpdate(user._id,{
+        $push:{offers:offer._id}
+    })
+}
+
 
 module.exports={
     createUser,
@@ -49,5 +56,6 @@ module.exports={
     deleteUser,
     getUser,
     getBtandById,
-    login
+    login,
+    addOfferToUser
 }

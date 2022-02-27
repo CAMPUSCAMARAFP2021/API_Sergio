@@ -15,7 +15,8 @@ router.get('/:offerID', async(req, res) => {
 
 router.post('/',async(req,res)=>{
     const {offer} = req.body;
-    const offers=await offersControllers.createOffer(offer);
+    offer.user = req.user._id;
+    const offers=await offersControllers.createOffer(offer, req.offer);
     res.json(offers);
 })
 
