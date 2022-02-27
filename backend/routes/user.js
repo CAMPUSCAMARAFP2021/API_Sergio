@@ -8,6 +8,7 @@ router.get('/',async(req,res)=>{
 })
 router.post('/login',async(req,res)=>{
     const {user}=req.body;
+    console.log(req.body.name)
     const{name,passwd}=user
     const result=await userControllers.login(name,passwd);
    res.json(result) 

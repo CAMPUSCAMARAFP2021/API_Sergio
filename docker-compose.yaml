@@ -13,14 +13,6 @@ services:
     environment:
       MONGODB_URL: mongodb://mongo:27017/offers
 
-  frontend:
-    image: nginx
-    working_dir: /usr/share/nginx/html
-    ports:
-      - 4200:80
-    volumes:
-      - ./frontend:/usr/share/nginx/html
-
   mongo:
     image: mongo
     volumes:
