@@ -1,30 +1,28 @@
 const User=require('../models/User');
-const jsw= require('jsonwebtoken');
-const Offer = require('../models/Offer');
+const jwt= require('jsonwebtoken');
 
 const encryptarPass=(pass)=>{
     return pass;
 }
-const buildJWB=(user)=>{
+const buildJWT=(user)=>{
     const time= Date.now();
 
-    return jsw.sign({
+    return jwt.sign({
         time,
         user
-    },'adivina');
+    },'zekreto');
 }
-const login=async(name,password)=>{
-    const user=await User.findOne({name})
-    if(!user) throw new Error("user not found")
-    console.log(user)
-    console.log(passwd)
-    if(passwd==user.pass){ return buildJWB(user)}else{
+const login=async(name,passwd)=>{
+    const Correctuser=await User.findOne({name})
+    if(!Correctuser) throw new Error("user not found")
+    if(passwd==Correctuser.passwd){ return buildJWT(Correctuser)}else{
     throw new Error("pass incorrect")}
    
 }
 
 const createUser=async(user)=>{
-    user.pass=encryptarPass(user.pass)
+    user.passwd=encryptarPass(user.passwd)
+    console.log(user.passwd)
     return await User.create(user);
 }
 const updateUser=async(userId,user)=>{

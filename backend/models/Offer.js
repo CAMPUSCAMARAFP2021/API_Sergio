@@ -5,14 +5,7 @@ const schema = new Schema({
     salary : Number,
     workday: String,
     agreement: String,
-    corporate: {type: Schema.Types.ObjectId, ref:'Corporate'},
-    candidates: [{type: Schema.Types.ObjectId, ref:'Candidate'}],
-    requirements: [{
-        type: Schema.Types.ObjectId,
-        required: true,
-        enum: ['Titulation', 'Experience']
-      }],
-    recommendeds: [{type: Schema.Types.ObjectId, ref:'Recommended'}]
+    user: {type: Schema.Types.ObjectId, ref:'User'}
     
 })
 const Offer = model('Offer', schema);

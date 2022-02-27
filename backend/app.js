@@ -14,7 +14,7 @@ var corporateRouter = require('./routes/corporate');
 var experienceRouter = require('./routes/experience');
 var sectorRouter = require('./routes/sector');
 var titulationRouter = require('./routes/titulation');
-const authorization = require('./middlewares/authorization');
+var authorization = require('./middlewares/authorization');
 
 
 var app = express();
