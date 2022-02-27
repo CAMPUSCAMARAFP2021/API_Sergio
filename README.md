@@ -1,105 +1,79 @@
 # Título del Proyecto
 
-_La api-restFull está hecha como proyecto final del segundo trimestre del grado de DAM, con el fin demostrar todos los conocimientos adquiridos. El proyecto se basa en un proyecto de busqueda de empleo, diseñado con [nodejs] y [jsvanilla] con una base de datos hecha en [mongodb]. Con una estructura de carpetas creada con express-generator para una mejor legibilidad_
+_La api-restFull está hecha como proyecto final del segundo trimestre del grado de DAM, con el fin demostrar todos los conocimientos adquiridos. El proyecto se basa en un proyecto de busqueda de empleo, diseñado con *nodejs* y [jsvanilla] con una base de datos hecha en [mongodb]. Con una estructura de carpetas creada con express-generator para una mejor legibilidad_
+
+
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Para poder usar este proyecto lo primero de todo es descargarse el proyecto.
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Para poder usarlo se necesita tener docker instalado y ubuntu en el ordenador
+
+Desopes dentro del visual abrir una terminar y ejecutar el siguiente comando para que pueda funcionar: docker compose up_
 
 
-### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
 
-```
-Da un ejemplo
-```
+## Pre-requisitos 📋
 
-### Instalación 🔧
+Instalar docker desktop
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+Instalar wls 2
 
-_Dí cómo será ese paso_
+Installar ubuntu
 
-```
-Da un ejemplo
-```
+Conectar wls al Visual Studio Code
 
-_Y repite_
 
-```
-hasta finalizar
-```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+## Instalación 🔧
 
-## Ejecutando las pruebas ⚙️
+Una vez hecho todo lo anterior, deberas meterte al backend con el siguiente comando:
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+    docker-compose run backend bash
 
-### Analice las pruebas end-to-end 🔩
+Una vez dentro del contenedor agrega el comando para instalar todas las librerias necesarias:
 
-_Explica que verifican estas pruebas y por qué_
+    npm i
 
-```
-Da un ejemplo
-```
+Y ya podemos salir del contenedor y ejecutar:
 
-### Y las pruebas de estilo de codificación ⌨️
+    docker-compose up
 
-_Explica que verifican estas pruebas y por qué_
+Esto hara que todos los contenedores incluidos en el archivo [docker-compose.yaml](#https://github.com/CAMPUSCAMARAFP2021/API_Sergio/blob/master/docker-compose.yaml) se levantaran y la app estará disponible
 
-```
-Da un ejemplo
-```
 
-## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+Para este proyecto he utilizado varios frameworks para el desarrollo:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Node](https://nodejs.org/es/) - diseñado para crear aplicaciones network escalables.
+* [express](https://expressjs.com/es/) - infraestructura de aplicaciones web Node.js
+* [jsonwebtoken](https://auth0.com/resources/ebooks/jwt-handbook/email?utm_source=google&utm_medium=cpc&utm_term=-g-json%20web%20token&pm=true&utm_campaign=spain-es-generic-kw_targeted&gclid=Cj0KCQiA3-yQBhD3ARIsAHuHT66FP8q8f_Zz3HRaWsAcoR4mlMQNsxJf5ocgY3WPHFz-Tydiow65_MkaApn7EALw_wcB) - creación de tokens de acceso que permiten la propagación de identidad y privilegios.
 
-## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+* **Sergio Lorente** - *Trabajo Inicial* - [slorentemontoro](#https://github.com/slorentemontoro)
+* **Angel Beltran** - *Apoyo constante* - [abeja21](#https://github.com/abeja21)
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia (Sergio Lorente).
+
+
+
 
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+* Le debo una comida a mi compañero Angel.
+* A mi compañero Nicolas por su apoyo moral y por ser DJ este fin de semana.
+* Por ultimo a Antonio por desestresarme con unos loletes.
