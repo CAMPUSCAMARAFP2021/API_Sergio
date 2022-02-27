@@ -8,16 +8,13 @@ router.get('/',async(req,res)=>{
 })
 router.post('/login',async(req,res)=>{
     const user=req.body;
-    console.log(user)
     const{name,passwd}=user
-    console.log(name, passwd)
     const result=await userControllers.login(name,passwd);
    res.json(result)
-   console.log(result)
 })
 
 router.post('/register',async(req,res)=>{
-    const{user}=req.body;
+    const user =req.body;
     const result=await userControllers.createUser(user)
     res.json(result)
 })
