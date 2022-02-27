@@ -13,11 +13,11 @@ router.get('/:offerID', async(req, res) => {
     res.json(offer);
 })
 
-router.post('/',async(req,res)=>{
-    const {offer} = req.body;
+router.post('/addoffer',async(req,res)=>{
+    const offer = req.body;
     offer.user = req.user._id;
     const offers=await offersControllers.createOffer(offer, req.offer);
-    res.json(offers);
+    res.redirect('/home.html?authorization='+ offers)
 })
 
 module.exports = router;

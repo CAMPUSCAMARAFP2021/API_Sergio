@@ -10,7 +10,7 @@ router.post('/login',async(req,res)=>{
     const user=req.body;
     const{name,passwd}=user
     const result=await userControllers.login(name,passwd);
-   res.json(result)
+   res.redirect('/home.html?authorization='+ result)
 })
 
 router.post('/register',async(req,res)=>{
