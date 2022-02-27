@@ -7,11 +7,13 @@ router.get('/',async(req,res)=>{
     res.json(result)
 })
 router.post('/login',async(req,res)=>{
-    const {user}=req.body;
-    console.log(req.body.name)
+    const user=req.body;
+    console.log(user)
     const{name,passwd}=user
+    console.log(name, passwd)
     const result=await userControllers.login(name,passwd);
-   res.json(result) 
+   res.json(result)
+   console.log(result)
 })
 
 router.post('/register',async(req,res)=>{
