@@ -1,6 +1,6 @@
 # Título del Proyecto
 
-_Proyecto diseñado para un trabajo de clase, se basa en un proyecto de busqueda de empleo, diseñado con nodejs y jsvanilla. Con una estructura creada con express-generator_
+_La api-restFull está hecha como proyecto final del segundo trimestre del grado de DAM, con el fin demostrar todos los conocimientos adquiridos. El proyecto se basa en un proyecto de busqueda de empleo, diseñado con [nodejs] y [jsvanilla] con una base de datos hecha en [mongodb]. Con una estructura de carpetas creada con express-generator para una mejor legibilidad_
 
 ## Comenzando 🚀
 
