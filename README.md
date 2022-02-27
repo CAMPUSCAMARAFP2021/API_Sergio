@@ -1,6 +1,6 @@
 # Título del Proyecto
 
-_La api-restFull está hecha como proyecto final del segundo trimestre del grado de DAM, con el fin demostrar todos los conocimientos adquiridos. El proyecto se basa en un proyecto de busqueda de empleo, diseñado con *nodejs* y [jsvanilla] con una base de datos hecha en [mongodb]. Con una estructura de carpetas creada con express-generator para una mejor legibilidad_
+_La api-restFull está hecha como proyecto final del segundo trimestre del grado de DAM, con el fin demostrar todos los conocimientos adquiridos. El proyecto se basa en un proyecto de busqueda de empleo, diseñado con **nodejs** y **jsvanilla** con una base de datos hecha en **mongodb**. Con una estructura de carpetas creada con **express-generator** para una mejor legibilidad_
 
 
 
@@ -17,13 +17,13 @@ Desopes dentro del visual abrir una terminar y ejecutar el siguiente comando par
 
 ## Pre-requisitos 📋
 
-Instalar docker desktop
+Instalar **docker desktop**
 
-Instalar wls 2
+Instalar **wsl 2**
 
-Installar ubuntu
+Installar **Ubuntu 20.04**
 
-Conectar wls al Visual Studio Code
+Conectar wsl al **Visual Studio Code**
 
 
 
