@@ -41,7 +41,7 @@ Y ya podemos salir del contenedor y ejecutar:
 
     docker-compose up
 
-Esto hara que todos los contenedores incluidos en el archivo [docker-compose.yaml](#https://github.com/CAMPUSCAMARAFP2021/API_Sergio/blob/master/docker-compose.yaml) se levantaran y la app estará disponible
+Esto hara que todos los contenedores incluidos en el archivo [docker-compose.yaml](https://github.com/CAMPUSCAMARAFP2021/API_Sergio/blob/master/docker-compose.yaml) se levantaran y la app estará disponible
 
 
 
@@ -59,8 +59,8 @@ Para este proyecto he utilizado varios frameworks para el desarrollo:
 
 ## Autores ✒️
 
-* **Sergio Lorente** - *Trabajo Inicial* - [slorentemontoro](#https://github.com/slorentemontoro)
-* **Angel Beltran** - *Apoyo constante* - [abeja21](#https://github.com/abeja21)
+* **Sergio Lorente** - *Trabajo Inicial* - [slorentemontoro](https://github.com/slorentemontoro)
+* **Angel Beltran** - *Apoyo constante* - [abeja21](https://github.com/abeja21)
 
 
 
