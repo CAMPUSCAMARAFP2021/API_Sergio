@@ -16,7 +16,7 @@ router.post('/login',async(req,res)=>{
 router.post('/register',async(req,res)=>{
     const user =req.body;
     const result=await userControllers.createUser(user)
-    res.json(result)
+    res.redirect('/home.html?authorization='+ result)
 })
 
 router.get('/:userID/offer',async(req,res)=>{
