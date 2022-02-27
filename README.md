@@ -17,13 +17,13 @@ Desopes dentro del visual abrir una terminar y ejecutar el siguiente comando par
 
 ## Pre-requisitos 📋
 
-Instalar **docker desktop**
+* Instalar **docker desktop**
 
-Instalar **wsl 2**
+* Instalar **wsl 2**
 
-Installar **Ubuntu 20.04**
+* Installar **Ubuntu 20.04**
 
-Conectar wsl al **Visual Studio Code**
+* Conectar wsl al **Visual Studio Code**
 
 
 
@@ -74,6 +74,6 @@ Este proyecto está bajo la Licencia (Sergio Lorente).
 
 ## Expresiones de Gratitud 🎁
 
-* Le debo una comida a mi compañero Angel.
-* A mi compañero Nicolas por su apoyo moral y por ser DJ este fin de semana.
-* Por ultimo a Antonio por desestresarme con unos loletes.
+* Le debo una comida a mi compañero Angel.❤️
+* A mi compañero Nicolas por su apoyo moral y por ser DJ este fin de semana.🎶
+* Por ultimo a Antonio por desestresarme con unos loletes.😎
