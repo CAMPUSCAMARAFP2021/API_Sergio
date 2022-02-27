@@ -1,8 +1,8 @@
 const User=require('../models/User');
 const jwt= require('jsonwebtoken');
 
-const encryptarPass=(pass)=>{
-    return pass;
+const encryptarPass=(passwd)=>{
+    return passwd;
 }
 const buildJWT=(user)=>{
     const time= Date.now();
@@ -14,22 +14,24 @@ const buildJWT=(user)=>{
 }
 const login=async(name,passwd)=>{
     const Correctuser=await User.findOne({name})
-    if(!Correctuser) throw new Error("user not found")
-    if(passwd==Correctuser.passwd){ return buildJWT(Correctuser)}else{
+    if(!Correctuser) throw new Error("user not found");
+    if(passwd == Correctuser.passwd){ return buildJWT(Correctuser)
+    }else{
     throw new Error("pass incorrect")}
    
 }
 
 const createUser=async(user)=>{
     const {name} = user
-    const checkuser = User.find(name)
-    if(!checkuser){
-    user.passwd=encryptarPass(user.passwd)
-    console.log(user.passwd)
-    return await User.create(user);
+    const checkuser = await User.findOne({name})
+    console.log(name, checkuser)
+    if(checkuser == null){
+        user.passwd = encryptarPass(user.passwd)
+        return await User.create(user)
     }else{
-        throw new Error("El usuario ya existe")
+        throw new Error("Usuario ya registrado")
     }
+
 }
 const updateUser=async(userId,user)=>{
     return await User.findById(userId).update(user);
