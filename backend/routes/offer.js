@@ -2,8 +2,8 @@ var router= require('express').Router();
 var offersControllers=require('../controllers/offers.js');
 
 router.get('/',async(req,res)=>{
-    const {offer} = req;
-    const offers = await offersControllers.getOffer(offer);
+    const {user} = req;
+    const offers = user ? await offersControllers.getOffers(user): await offersControllers.getOffers();
     res.json(offers);
 });
 
@@ -13,11 +13,17 @@ router.get('/:offerID', async(req, res) => {
     res.json(offer);
 })
 
-router.post('/:offerID', async(req, res) => {
+router.delete('/:offerID', async(req, res) => {
     const {offerID} = req.params;
     const offer = await offersControllers.deleteOffer(offerID);
     res.json(offer);
 })
+
+// router.put('/:offerID', async(req, res) => {
+//     const {offerID} = req.params;
+//     const offer = await offersControllers.deleteOffer(offerID);
+//     res.json(offer);
+// })
 
 router.post('/',async(req,res)=>{   
     const {offer} = req.body;
