@@ -10,13 +10,13 @@ router.post('/login',async(req,res)=>{
     const user=req.body;
     const{name,passwd}=user
     const result=await userControllers.login(name,passwd);
-   res.redirect('/home.html?authorization='+ result)
+    res.json(result)
 })
 
 router.post('/',async(req,res)=>{
     const user =req.body;
     const result=await userControllers.createUser(user)
-    res.redirect('/home.html?authorization='+ result)
+    res.json(result)
 })
 
 router.get('/:userID/offers',async(req,res)=>{

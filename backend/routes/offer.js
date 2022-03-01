@@ -31,7 +31,6 @@ router.post('/',async(req,res)=>{
     offer.user = req.user._id;
     const offers=await offersControllers.createOffer(offer, req.offer);
     res.json(offers)
-    // res.redirect('/home.html?authorization='+ offers)
 })
 
 module.exports = router;
