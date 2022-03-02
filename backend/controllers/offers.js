@@ -13,8 +13,8 @@ const deleteOffer=async(offerId)=>{
  return true;
 }
 
-const getOffer=async()=>{
-    return await Offer.find()
+const getOffers=async(user = false)=>{
+   return user ? await Offer.find({user}) : await Offer.find()
 }
 
 const getOfferByID= async(offerID)=>{
@@ -25,6 +25,6 @@ module.exports = {
     createOffer,
     updateOffer,
     deleteOffer,
-    getOffer,
+    getOffers,
     getOfferByID
 };  
