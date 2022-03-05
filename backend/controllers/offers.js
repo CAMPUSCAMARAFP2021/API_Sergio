@@ -13,8 +13,8 @@ const deleteOffer=async(offerId)=>{
  return true;
 }
 
-const getOffers=async(user = false)=>{
-   return user ? await Offer.find({user}) : await Offer.find()
+const getOffers=async({user})=>{
+   return await Offer.find({user})
 }
 
 const getOfferByID= async(offerID)=>{

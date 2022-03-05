@@ -3,7 +3,7 @@ var offersControllers=require('../controllers/offers.js');
 
 router.get('/',async(req,res)=>{
     const {user} = req;
-    const offers = user ? await offersControllers.getOffers(user): await offersControllers.getOffers();
+    const offers = await offersControllers.getOffers(user)
     res.json(offers);
 });
 
@@ -22,8 +22,8 @@ router.delete('/:offerID', async(req, res) => {
 
 router.post('/',async(req,res)=>{   
     const {offer} = req.body;
-    console.log(req.user._id)
-    offer.user = req.user._id;
+    offer.user = req.user.user._id;
+    console.log(req.user)
     const offers=await offersControllers.createOffer(offer, req.offer);
     res.json(offers)
 })

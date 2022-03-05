@@ -21,6 +21,12 @@ const login=async(name,passwd)=>{
    
 }
 
+const addOffertoUser = async(user,offer) => {
+    return await User.findByIdAndUpdate(user._id,{
+        $push:{offer:offer._id}
+    })
+}
+
 const createUser=async(user)=>{
     const {name} = user
     const checkuser = await User.findOne({name})

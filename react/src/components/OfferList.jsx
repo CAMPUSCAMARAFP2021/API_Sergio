@@ -28,7 +28,7 @@ const OfferList = ({jwt}) => {
 
     const loadData = () => {
         setIsLoading(true);
-        getOffers().then((offers) => {    
+        getOffers(jwt).then((offers) => {    
             setIsLoading(false)
             setOffers(offers);
         }).catch(() => setIsLoading(false));
