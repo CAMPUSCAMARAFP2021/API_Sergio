@@ -2,14 +2,14 @@ import Offer from "./Offer"
 import OfferForm from './OfferForm';
 
 import { useState, useEffect } from 'react';
-import { getOffers,   createOffers,    deleteOffers} from "../api/offers";
+import { getOffers,   createOffers,    deleteOffers} from "../api/Offers";
 
-const OfferList = () => {
+const OfferList = ({jwt}) => {
     const [offers, setOffers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     
 
-    const doCreateOffer = (offer) => {
+    const doCreateOffer = (offer, jwt) => {
         setIsLoading(true);
         createOffers(offer)
             .then((newOffer) => {
@@ -19,7 +19,7 @@ const OfferList = () => {
     };
     
 
-    const doDeleteOffer = (offer) => {
+    const doDeleteOffer = (offer, jwt) => {
        setIsLoading(true);
        deleteOffers(offer)
        .then(loadData);
@@ -29,8 +29,8 @@ const OfferList = () => {
     const loadData = () => {
         setIsLoading(true);
         getOffers().then((offers) => {    
-            setOffers(offers);
             setIsLoading(false)
+            setOffers(offers);
         }).catch(() => setIsLoading(false));
     }
     useEffect(loadData,[]); 
@@ -44,7 +44,7 @@ const OfferList = () => {
                     offer={offer} 
                    onDelete={() => doDeleteOffer(offer)}
                 />)}
-        <OfferForm createOffer={doCreateOffer}></OfferForm>
+        <OfferForm createOffers={doCreateOffer}></OfferForm>
     </>
         
 }

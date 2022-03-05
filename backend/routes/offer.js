@@ -19,11 +19,6 @@ router.delete('/:offerID', async(req, res) => {
     res.json(offer);
 })
 
-// router.put('/:offerID', async(req, res) => {
-//     const {offerID} = req.params;
-//     const offer = await offersControllers.deleteOffer(offerID);
-//     res.json(offer);
-// })
 
 router.post('/',async(req,res)=>{   
     const {offer} = req.body;
