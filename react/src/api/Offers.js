@@ -8,7 +8,7 @@ const getOffers = async (jwt) => {
 const createOffers = async (offer, jwt) => {
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
-    headers.append("Authorization", jwt);
+    headers.append("authorization", jwt);
     const body = JSON.stringify({offer});
     const requestOptions = {
         method: 'POST', headers, body,redirect: 'follow'
@@ -20,7 +20,7 @@ const createOffers = async (offer, jwt) => {
 const deleteOffers = async (offer, jwt) => {
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
-    headers.append("Authorization", jwt);
+    headers.append("authorization", jwt);
     const requestOptions = {
         method: 'DELETE', headers, redirect: 'follow'
     };
