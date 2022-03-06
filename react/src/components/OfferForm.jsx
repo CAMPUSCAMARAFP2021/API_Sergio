@@ -29,15 +29,19 @@ const OfferForm = ({createOffers}) => {
 
 
     return <>
-        <form>
-            <input type="text" name="title" onChange={setName} value={offer.name}></input>
-            <input type="text" name="author" onChange={setSalary} value={offer.salary}></input>
-            <input type="text" name="author" onChange={setWorkday} value={offer.workday}></input>
+        <form class="form-signin">
+            <br></br>
+            <label for="floatingInput">Titulo</label>
+            <input class="form-control" type="text" name="title" onChange={setName} value={offer.name}></input>
+            <br></br>
+            <label for="floatingInput">Salario</label>
+            <input class="form-control" type="text" name="author" onChange={setSalary} value={offer.salary}></input>
+            <br></br>
+            <label for="floatingInput">Contrato</label>
+            <input class="form-control" type="text" name="author" onChange={setWorkday} value={offer.workday}></input>
         </form>
-        <Button name="enviar" onClick={() => createOffers(offer)}></Button>
-        <div> 
-            {JSON.stringify(offer)}
-        </div>
+        <br></br>
+        <Button variant="primary" name="enviar" onClick={() => createOffers(offer)}></Button>
     </>;
 }
 export default OfferForm;

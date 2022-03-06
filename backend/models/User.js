@@ -4,7 +4,7 @@ const schema = new Schema({
     name: String,
     passwd: String,
     email: String,
-    achievements: {type: Schema.Types.ObjectId, ref:'Achieve'}
+    offers: [{type: Schema.Types.ObjectId, ref:'offers'}]
 })
 
 const User = model('User', schema);

@@ -58,7 +58,7 @@ const getBtandById=async({userID})=>{
 
 const addOfferToUser = async(user, offer) =>{
     return await User.findByIdAndUpdate(user._id,{
-        $push:{offers:offer._id}
+        $push:{offers:offer}
     })
 }
 

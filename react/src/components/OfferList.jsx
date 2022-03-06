@@ -9,9 +9,9 @@ const OfferList = ({jwt}) => {
     const [isLoading, setIsLoading] = useState(false);
     
 
-    const doCreateOffer = (offer, jwt) => {
+    const doCreateOffer = (offer) => {
         setIsLoading(true);
-        createOffers(offer)
+        createOffers(offer, jwt)
             .then((newOffer) => {
                  setOffers((prevState) => [...prevState, newOffer]);
                  setIsLoading(false);       
@@ -19,11 +19,10 @@ const OfferList = ({jwt}) => {
     };
     
 
-    const doDeleteOffer = (offer, jwt) => {
+    const doDeleteOffer = (offer) => {
        setIsLoading(true);
-       deleteOffers(offer)
+       deleteOffers(offer,jwt)
        .then(loadData);
-       setIsLoading(false)
    };
 
     const loadData = () => {
@@ -44,6 +43,7 @@ const OfferList = ({jwt}) => {
                     offer={offer} 
                    onDelete={() => doDeleteOffer(offer)}
                 />)}
+                <br></br>
         <OfferForm createOffers={doCreateOffer}></OfferForm>
     </>
         
