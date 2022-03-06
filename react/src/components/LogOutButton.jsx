@@ -1,4 +1,6 @@
+import Button from 'react-bootstrap/Button';
+
 const LogOutButton = ({onLogOut}) => 
-  <button onClick={onLogOut}>logout</button>
+  <Button class="w-100 btn btn-lg btn-primary boton" onClick={onLogOut}>logout</Button>
   
 export default LogOutButton;

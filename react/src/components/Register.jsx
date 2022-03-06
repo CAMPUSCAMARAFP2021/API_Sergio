@@ -8,6 +8,7 @@ const Login = ({onRegisterClick}) => {
     const inputPasswdHandler = ({target}) => setPasswd(target.value);
 
     return <>
+        <h1>REGISTRO</h1>
         <br></br>
         <label for="floatingInput">Nombre</label>
         <input class="form-control" type="text" name={user} onChange={inputUserHandler}></input>
@@ -15,10 +16,7 @@ const Login = ({onRegisterClick}) => {
         <label for="floatingPassword">Contraseña</label>
         <input class="form-control" type="password" name={passwd} onChange={inputPasswdHandler}></input>
         <br></br>
-        <button class="w-100 btn btn-lg btn-primary"  onClick={() => onRegisterClick(user,passwd)}>Registrar</button>
-        <label>
-            <a href="Login">Iniciar Sesion</a>
-        </label>
+        <button class="btn btn-lg btn-primary" onClick={() => onRegisterClick(user,passwd)}>Registrar</button>
     </>
 }
 

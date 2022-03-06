@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Button from './Button';
-import "react-datepicker/dist/react-datepicker.css";
 
 const OfferForm = ({createOffers}) => {
     const [offer, setOffer] = useState(
@@ -29,7 +28,7 @@ const OfferForm = ({createOffers}) => {
 
 
     return <>
-        <form class="form-signin">
+        <form>
             <br></br>
             <label for="floatingInput">Titulo</label>
             <input class="form-control" type="text" name="title" onChange={setName} value={offer.name}></input>
@@ -41,7 +40,7 @@ const OfferForm = ({createOffers}) => {
             <input class="form-control" type="text" name="author" onChange={setWorkday} value={offer.workday}></input>
         </form>
         <br></br>
-        <Button variant="primary" name="enviar" onClick={() => createOffers(offer)}></Button>
+        <Button class="w-100 btn btn-lg btn-primary boton" name="Crear Oferta" onClick={() => createOffers(offer)}></Button>
     </>;
 }
 export default OfferForm;
